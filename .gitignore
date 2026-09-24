@@ -41,3 +41,8 @@ app-example
 # generated native folders
 /ios
 /android
+
+# local agent tooling
+.agents/
+.aider-desk/
+skills-lock.json
