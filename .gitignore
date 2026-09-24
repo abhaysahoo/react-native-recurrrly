@@ -45,4 +45,8 @@ app-example
 # local agent tooling
 .agents/
 .aider-desk/
+.claude/
+.cursor/
+AGENTS.md
+CLAUDE.md
 skills-lock.json
