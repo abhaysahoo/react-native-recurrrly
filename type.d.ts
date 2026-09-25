@@ -1,4 +1,9 @@
-import type { ImageSourcePropType } from "react-native";
+import type { ReactNode } from "react";
+import type {
+  ImageSourcePropType,
+  KeyboardTypeOptions,
+  TextInputProps,
+} from "react-native";
 
 declare global {
   interface AppTab {
@@ -52,6 +57,35 @@ declare global {
 
   interface ListHeadingProps {
     title: string;
+  }
+
+  interface AuthScreenProps {
+    title: string;
+    subtitle: string;
+    children: ReactNode;
+    footer?: ReactNode;
+  }
+
+  interface AuthFieldProps {
+    label: string;
+    value: string;
+    onChangeText: (value: string) => void;
+    placeholder: string;
+    error?: string;
+    secureTextEntry?: boolean;
+    keyboardType?: KeyboardTypeOptions;
+    autoCapitalize?: TextInputProps["autoCapitalize"];
+    autoComplete?: TextInputProps["autoComplete"];
+    textContentType?: TextInputProps["textContentType"];
+    editable?: boolean;
+    returnKeyType?: TextInputProps["returnKeyType"];
+    onSubmitEditing?: TextInputProps["onSubmitEditing"];
+  }
+
+  interface AuthFieldErrors {
+    email?: string;
+    password?: string;
+    code?: string;
   }
 }
 
